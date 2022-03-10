@@ -21,3 +21,9 @@ android {
 dependencies {
     implementation 'com.android.support:support-v4:25.4.0'
 }
+
+task generateVersionTxt {
+    doLast {
+        file("./version.txt").text = android.defaultConfig.versionName
+    }
+}
